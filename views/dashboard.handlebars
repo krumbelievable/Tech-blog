@@ -1,0 +1,26 @@
+<div> 
+
+
+<h2> Your Posts </h2>
+{{#if posts.length}}
+</div>
+
+{{#each posts as |post|}}
+
+
+<section class="card bg-info">
+<a href="/post/{{id}}">
+    <header class="text-dark">{{post.title}}</header>
+
+    <div class="card-body bg-primary">
+        <p class="text-dark">{{post.post_content}}</p>
+        <p class="text-dark">{{post.user.name}}</p>
+    </div>
+  </a>
+<a href="./comment/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+</section>
+
+
+{{/each}}
+
+{{/if}}

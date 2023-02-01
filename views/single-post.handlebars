@@ -1,0 +1,19 @@
+<div class="text-dark bg primary">
+{{> posts-info}}
+</div>
+{{#if logged_in}}
+
+  <a href="/post/{{id}}"></a>
+
+<form>
+    <textarea name="comment_content"></textarea>
+</form>
+
+<button type="submit">Add Comment</button>
+
+{{> post-comments}}
+
+{{else}}
+<a href="/login">You must login first to view this page</a>
+<script src="./js/comment.js"></script>
+{{/if}}
