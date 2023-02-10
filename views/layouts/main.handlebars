@@ -10,6 +10,7 @@
   </head>
 </head>
 
+<!-- div set up for all of our handlebars pages -->
 <body class="bg-secondary">
   <div class="flex-column justify-space-around">
     <header class="text-center p-2 bg-primary">
@@ -17,7 +18,7 @@
         The Tech Blog
       </h1>
       <nav>
-        <!-- Conditionally render login or logout links -->
+        <!-- Renders login or logout buttons based on the users log in state -->
         {{#if logged_in}}
         <a href="/" class="text-dark">Homepage</a>
         <a href="/dashboard" class="text-dark" >Dashboard</a>
@@ -29,7 +30,7 @@
       </nav>
     </header>
     <main class="container container-fluid mt-5">
-      <!-- Render the sub layout -->
+      <!-- Brings in extra layouts as needed -->
       {{{ body }}}
     </main>
     <footer>
@@ -37,7 +38,7 @@
     </footer>
   </div>
 
-  <!-- Render script for logged in users only -->
+  <!-- Gives a logout button if needed -->
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}

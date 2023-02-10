@@ -1,3 +1,4 @@
+//controls login function
 async function loginFormHandler(event) {
   event.preventDefault();
 
@@ -23,9 +24,10 @@ async function loginFormHandler(event) {
   }
 }
 
+// singup function for users
 const signupFormHandler = async (event) => {
   event.preventDefault();
-  console.log('hello')
+  console.log('hello');
 
   const name = document.querySelector('#name-signup').value.trim();
   const email = document.querySelector('#email-signup').value.trim();
@@ -46,5 +48,9 @@ const signupFormHandler = async (event) => {
   }
 };
 
-document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
-document.querySelector('#login-form').addEventListener('submit', loginFormHandler);
+document
+  .querySelector('.signup-form')
+  .addEventListener('submit', signupFormHandler);
+document
+  .querySelector('#login-form')
+  .addEventListener('submit', loginFormHandler);

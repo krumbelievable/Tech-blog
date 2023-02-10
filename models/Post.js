@@ -3,6 +3,8 @@ const sequelize = require('../config/connection');
 
 class Post extends Model {}
 
+//model for posts
+
 Post.init(
   {
     id: {
@@ -17,20 +19,20 @@ Post.init(
     },
     post_content: {
       type: DataTypes.TEXT,
-      allowNull: true
+      allowNull: true,
     },
     date_created: {
       type: DataTypes.DATE,
       allowNull: false,
-      defaultValue: DataTypes.NOW
+      defaultValue: DataTypes.NOW,
     },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'user',
         key: 'id',
-      }
-    }
+      },
+    },
   },
   {
     sequelize,

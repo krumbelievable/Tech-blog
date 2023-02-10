@@ -2,31 +2,32 @@ const { Post } = require('../models');
 
 const postData = [
   {
-    title: "new LTFC Graphics card set for release in December", 
-    post_content: "The LTFC 4000 Graphic card is set to release for the holidays on December 3rd. Start saving, the price is pretty high! V1 is starting at 699.00 and the V2 is 850.00",
-    user_id: 1
+    title: 'Elon Musk',
+    post_content: 'What a stinker.',
+    user_id: 1,
   },
   {
-    title: "Megascript: The new coding language", 
-    post_content: "If you are a Web Developer, you may be interested in the new coding language that everyone is talking about: Megascript!",
-    user_id: 2
+    title: 'Snowden',
+    post_content: 'Man is still a whistleblowing machine!',
+    user_id: 2,
   },
   {
-    title: "AlphaTec Stocks drop 5 points", 
-    post_content: "If you have been watching the market, you may see the new up and coming tech company, Alphatech, lost 5 points today",
-    user_id: 3
+    title: 'Amazon stocks plummet',
+    post_content:
+      'I hope Bezos is not wasting all his money on his trips to space.',
+    user_id: 3,
   },
   {
-    title: "New MMORPG is set to change the way you game", 
-    post_content: "Nordic Dream, the new MMO, is finishing up development and looking to start its beta invitations later this week",
-    user_id: 4
+    title: 'Real mice to control computers?',
+    post_content: 'Has science gone too far?',
+    user_id: 4,
   },
   {
-    title: "How often should i clean out my desktop computer?", 
-    post_content: "Today we are going to go over the proper way to clean out your computer and how often you should do it.",
-    user_id: 5
+    title: 'How often should I empty my trash folder?',
+    post_content:
+      'Can i just leave files there or should i be dumping it randomly?',
+    user_id: 5,
   },
-
 ];
 
 const seedPost = () => Post.bulkCreate(postData);

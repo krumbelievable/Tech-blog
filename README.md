@@ -11,11 +11,11 @@ SO THAT I can publish articles, blog posts, and my thoughts and opinions
 * node server.js in terminal
 
 # Description
-* The application utilizes mySQL, express.js and sequelize to create a database of users making posts on a tech blog and utilizes handlebars to create the front end.
-* The application is deployed through Heroku.
-* The user must create a username and password before moving towards the main page. 
-* Users are able to move through the page and access all posts, a single post and even create posts.
-* The user will be kicked if they have not been engaged in activity on the page for some time.  
+* This applications uses a database through mySQL, sequelize, and express.js for storing posts.
+* This application is deployed utlizing heroku.
+* User must create an account to use it. 
+* Users can access singular and all posts along with creating them.
+* Sessions are used to limit acess by users to the database. 
 
 
 # Technologies

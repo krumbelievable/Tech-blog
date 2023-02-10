@@ -6,6 +6,8 @@ const dashRoutes = require('./dashboardRoutes');
 
 router.use('/', homeRoutes);
 router.use('/api', apiRoutes);
-router.use('/dashboard', dashRoutes)
+router.use('/dashboard', dashRoutes);
 
 module.exports = router;
+
+//needed to server can access api routes

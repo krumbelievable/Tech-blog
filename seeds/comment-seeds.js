@@ -4,29 +4,28 @@ const commentData = [
   {
     user_id: 1,
     post_id: 3,
-    comment_text: 'I should sell now!'
+    comment_text: 'I should buy now!',
   },
   {
     user_id: 2,
     post_id: 1,
-    comment_text: 'I am waiting for it to go on sale before I get it, nobody has money lik that!'
+    comment_text: 'Buying his car made my hair fall out.',
   },
   {
     user_id: 3,
     post_id: 2,
-    comment_text: 'Interesting, but im a vanilla javascript kinda guy.'
+    comment_text: 'He can blow my whistle anytime',
   },
   {
     user_id: 4,
     post_id: 5,
-    comment_text: 'Thank you! My desktop is really starting to get dirty!'
+    comment_text: 'Please someone answer this.',
   },
   {
     user_id: 5,
     post_id: 4,
-    comment_text: 'I am so excited! this game looks amazing!'
+    comment_text: 'Finally a use to all of my rodents',
   },
- 
 ];
 
 const seedComment = () => Comment.bulkCreate(commentData);

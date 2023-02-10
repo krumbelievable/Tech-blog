@@ -1,29 +1,30 @@
+//controls posting function
 async function newFormHandler(event) {
-    event.preventDefault();
-    console.log('booyahh')
-    const title = document.querySelector('input[id="post-title"]').value;
-    const post_content = document.querySelector('input[id="post-content"]').value;
+  event.preventDefault();
+  console.log('booyahh');
+  const title = document.querySelector('input[id="post-title"]').value;
+  const post_content = document.querySelector('input[id="post-content"]').value;
 
-    const response = await fetch('/api/post', {
-        method: 'POST',
-        body: JSON.stringify({
-            title,
-            post_content
+  const response = await fetch('/api/post', {
+    method: 'POST',
+    body: JSON.stringify({
+      title,
+      post_content,
+    }),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
 
-
-        }),
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    })
-
-    if (response.ok) {
-        document.location.replace('/')
-    } else {
-        alert(response.statusText)
-    }
+  if (response.ok) {
+    document.location.replace('/');
+  } else {
+    alert(response.statusText);
+  }
 }
 
-
+// adds post based on button click
 const sendButton = document.querySelector('#send');
-if (sendButton) {sendButton.addEventListener('click', newFormHandler)};
+if (sendButton) {
+  sendButton.addEventListener('click', newFormHandler);
+}

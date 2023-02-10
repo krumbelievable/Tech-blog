@@ -1,3 +1,4 @@
+<!--sets up a single post -->
 <div class="text-dark bg primary">
 {{> posts-info}}
 </div>
@@ -13,6 +14,7 @@
 
 {{> post-comments}}
 
+<!-- checks to see if a user is logged in -->
 {{else}}
 <a href="/login">You must login first to view this page</a>
 <script src="./js/comment.js"></script>
